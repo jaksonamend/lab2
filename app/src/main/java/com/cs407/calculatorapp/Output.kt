@@ -22,11 +22,16 @@ class Output : AppCompatActivity() {
 
         }
 
-        val message = intent.getIntExtra("result", 0)
+        val message = intent.getIntExtra("result", -1)
         val errorMessage = intent.getStringExtra("errorMessage")
         // get data using intent
         val resultTextView = findViewById<TextView>(R.id.resultTextView)
-        resultTextView.text = message.toString()
-        resultTextView.text = errorMessage.toString()
+
+        if(errorMessage != null){
+            resultTextView.text = errorMessage.toString()
+        }
+        else{
+            resultTextView.text = message.toString()
+        }
     }
 }
