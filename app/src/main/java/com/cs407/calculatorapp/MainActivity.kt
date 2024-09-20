@@ -26,15 +26,6 @@ class MainActivity : AppCompatActivity() {
             val userInput1 = findViewById<EditText>(R.id.editTextNumber2)
             val userInput2 = findViewById<EditText>(R.id.editTextNumber3)
 
-            // Clear text when the user clicks
-            userInput1.setOnClickListener {
-                userInput1.setText("")
-            }
-
-            userInput2.setOnClickListener {
-                userInput2.setText("")
-            }
-
             additionButton.setOnClickListener{
                 val input1 = userInput1.text.toString().toInt()
                 val input2 = userInput2.text.toString().toInt()
